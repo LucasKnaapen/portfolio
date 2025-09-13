@@ -1,0 +1,230 @@
+:root {
+  --bg: #0f1724; 
+  --card: #0b1220;
+  --muted: #9aa4b2;
+  --accent: #7c5cff;
+  --glass: rgba(255, 255, 255, 0.03);
+  --radius: 12px;
+  color-scheme: dark;
+  color: #e6eef8;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --muted: #55606e;
+    --accent: #6b46ff;
+    --glass: rgba(0, 0, 0, 0.02);
+    color-scheme: light;
+    color: #0b1220;
+  }
+}
+
+/* Global styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, var(--bg), #081024);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 36px auto;
+  padding-top: 28px;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), #4dc0ff);
+  display: inline-grid;
+  place-items: center;
+  color: white;
+}
+
+.brand h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  background: var(--glass);
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+}
+
+/* Main content */
+main {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 28px;
+  margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  margin-top: 18px;
+}
+
+.hero h2 {
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.hero p {
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.hero .actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Skills */
+.skills-section {
+  margin-top: 18px;
+}
+
+.skills-section h4 {
+  margin: 0 0 8px 0;
+}
+
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill .bar {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.skill .fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), #4dc0ff);
+}
+
+.fill-html { width: 95%; }
+.fill-js { width: 88%; }
+.fill-react { width: 90%; }
+
+/* Cards */
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+#projects {
+  margin-top: 18px;
+}
+
+/* Projects */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.more-link {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.more-link a {
+  color: var(--accent);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.project {
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.project h3 {
+  margin-bottom: 6px;
+}
+
+.project p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.project .tags {
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tag {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 13px;
+}
+
