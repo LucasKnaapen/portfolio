@@ -42,12 +42,17 @@ a {
   padding-top: 28px;
 }
 
-/* Header */
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* logo links, knop helemaal rechts */
 }
+
+
+header .btn {
+  margin-left: 20px;  /* optioneel wat extra ruimte */
+}
+
 
 .brand {
   display: flex;
